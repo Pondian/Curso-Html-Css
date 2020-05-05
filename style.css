@@ -7,10 +7,6 @@ header {
 	padding: 20px 0;
 }
 
-main {
-	
-}
-
 form {
 	margin: 40px 0;
 }
@@ -71,11 +67,6 @@ nav a:hover {
 .produtos li:hover {
 	border-color: #c78c19;
 	background: grey;
-	transform: scale(1.2);
-}
-
-.produtos li:active {
-	border-color: #088c19;
 }
 
 .produtos li:hover h2 {
@@ -169,7 +160,7 @@ th, td {
 	clear: left;
 }
 
-.principal{
+.principal {
 	padding: 3em 0;
 	background: #fefefe;
 	width: 940px;
@@ -178,7 +169,6 @@ th, td {
 
 .principal p {
 	margin: 0 0 1em;
-	
 }
 
 .principal strong {
@@ -198,9 +188,9 @@ th, td {
 .mapa {
 	padding: 3em 0;
 	background: linear-gradient(#fefefe, #888888);
-	
 }
-.mapa-conteudo{
+
+.mapa-conteudo {
 	width: 940px;
 	margin: 0 auto;
 }
@@ -226,22 +216,71 @@ th, td {
 	vertical-align: top;
 }
 
-.itens{
+.itens {
 	line-height: 1.5;
 }
 
-.itens:before{
+.itens:before {
 	content: "🟊";
 }
-.itens:first-child{
+
+.itens:first-child {
 	font-weight: bold;
 }
 
 .imagem-beneficios {
 	width: 60%;
+	opacity: 1;
+	transition: 400ms;
+	box-shadow: 10px 10px 10px 0 #000000;
+}
+
+.imagem-beneficios:hover {
+	opacity: 0.3;
 }
 
 .video {
 	width: 560px;
 	margin: 2em auto;
+}
+
+@media screen and (max-width:480px) {
+	.caixa, .principal, .conteudo-beneficios, .mapa-conteudo, .video, .produtos {
+		width: auto;
+	}
+	h1 {
+		text-align: center;
+	}
+	nav {
+		position: static;
+	}
+	.lista-beneficios, .imagem-beneficios {
+		width: 100%;
+	}
+
+	/*RESPONSE PRODUTOS*/
+	.produtos li {
+		display: block;
+		text-align: center;
+		width: auto;
+		padding: 10px 10px;
+		margin: 0 10px 10px 10px;
+	}
+	
+	footer{
+		padding: 20px 0;
+	}
+
+	form{
+		margin: 0 0 0 10px;
+	}
+	form:first-child{
+		margin-top: 30px;
+	}
+	.enviar{
+		margin: 0 0 0 15px;
+		width: 60%;
+		text-align: left;
+		
+	}
 }
